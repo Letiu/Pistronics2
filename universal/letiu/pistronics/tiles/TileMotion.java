@@ -63,6 +63,7 @@ public class TileMotion extends TileElementHolder implements ISpecialRenderTile,
 				if (progress >= 1F) {
 					pushEntitiesFinal();
 					loadBlock();
+					postMove();
 					//ktryToMoveOn();
 				}
 			}
@@ -364,8 +365,13 @@ public class TileMotion extends TileElementHolder implements ISpecialRenderTile,
 			((ISpecialRotator) block).postRotate(world, x, y, z, rotateDir, rotateSpeed, rotatePoint);
 		}
         else {
-            RotateUtil.rotateVanillaBlocks(world, x, y, z, rotateDir);
+            RotateUtil.rotateVanillaBlocks(world, x, y, z, elementMeta, rotateDir);
         }
+	}
+
+	private void postMove() {
+		WorldUtil.setBlockMeta(tileEntity.getWorldObj(), tileEntity.xCoord,
+				tileEntity.yCoord, tileEntity.zCoord, elementMeta, 3);
 	}
 	
 	@Override

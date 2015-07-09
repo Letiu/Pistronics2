@@ -11,6 +11,9 @@ http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1294844-
   Added: ConfigOption: showAllExtensions, showAllExtensionParts and showAllSails
   Added: ConfigOption: alternateSlimeblockRecipe
   Added: Mirrored Recipes for Saw and Chisel
+  Added: Stopper
+  Added: The following vanilla blocks can now be rotated: Logs, Stairs, Pistons, Furni,
+	Droppers, Dispensers and Chests
   Changed: Tools can no longer be crafted with redstone rods (this was never intended)
   Changed: Doubled the output of the Camoupaste recipe
   Changed: Changed and nerfed crafting path for Petrify Arrows 

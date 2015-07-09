@@ -9,27 +9,27 @@ import letiu.modbase.util.ItemReference;
 import letiu.modbase.util.WorldUtil;
 import letiu.pistronics.piston.IPistonElement;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDispenser;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class RotateUtil {
 
-    public static void rotateVanillaBlocks(World world, int x, int y, int z, int rotateDir) {
+    public static void rotateVanillaBlocks(World world, int x, int y, int z, int oldMeta, int rotateDir) {
         if ((rotateDir == 0 || rotateDir == 1) && ItemReference.isStair(WorldUtil.getBlock(world, x, y, z))) {
-            int currentMeta = WorldUtil.getBlockMeta(world, x, y, z);
+            int currentMeta = oldMeta;
             int meta = cycle(rotateDir == 1, currentMeta % 4, 0, 2, 1, 3) + (currentMeta / 4) * 4;
             WorldUtil.setBlockMeta(world, x, y, z, meta, 3);
         }
         else if ((rotateDir == 0 || rotateDir == 1) && ItemReference.isChest(WorldUtil.getBlock(world, x, y, z))) {
-            System.out.println("rotating chest");
-            int currentMeta = WorldUtil.getBlockMeta(world, x, y, z);
+            int currentMeta = oldMeta;
             int meta = cycle(rotateDir == 1, currentMeta, 2, 5, 3, 4);
             WorldUtil.setBlockMeta(world, x, y, z, meta, 3);
         }
         else if (ItemReference.isLog(WorldUtil.getBlock(world, x, y, z))) {
             rotateDir = (rotateDir & 14) * 2;
             if (rotateDir != 0) rotateDir = rotateDir == 4 ? 8 : 4;
-            int currentMeta = WorldUtil.getBlockMeta(world, x, y, z);
+            int currentMeta = oldMeta;
             int meta = rotateDir + (currentMeta / 4) * 4;
             switch (meta) {
                 case 8: meta = 4; break;
@@ -42,6 +42,17 @@ public class RotateUtil {
                 WorldUtil.setBlockMeta(world, x, y, z, meta, 3);
             }
         }
+		else if (ItemReference.isPiston(WorldUtil.getBlock(world, x, y, z))) {
+		    int meta = oldMeta;
+			int bit123 = meta & 7;
+			int bit4 = meta & 8;
+			bit123 = rotateDir(bit123, rotateDir);
+			meta = bit123 | bit4;
+			WorldUtil.setBlockMeta(world, x, y, z, meta, 3);
+		}
+		else {
+			WorldUtil.setBlockMeta(world, x, y, z, oldMeta, 3);
+		}
 
     }
 

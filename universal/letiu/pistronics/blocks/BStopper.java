@@ -33,7 +33,7 @@ public class BStopper extends PBlock {
 		this.resistance = 15F;
 		this.creativeTab = true;
 		this.textures = new String[1];
-		this.textures[0] = Textures.BOX;
+		this.textures[0] = Textures.STOPPER;
 		this.blockIcon = this.textures[0];
 	}
 	

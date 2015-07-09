@@ -142,6 +142,8 @@ public class Textures {
 	public static final String SUPER_GLUE_BLOCK = "slimeblocks/superglueblock";
 	
 	public static final String CAMOU_SAIL = "camou/camou_sail";
+
+	public static final String STOPPER = "stopper/stopper";
 	
 	// ITEMS //
 	

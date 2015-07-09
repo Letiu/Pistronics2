@@ -19,18 +19,19 @@ public class PageTool extends Page {
 		book.drawLine(x + 22, y + 24);
 		book.drawFramedStack(BlockItemUtil.getStack(ItemData.tool), x + 22, y + 30, 1.8F);
 		
-		String text1 = "The Tool is a tool to rotate stuff. Rightclick on any pistronics";
+		String text1 = "The Tool is a tool to rotate stuff. Rightclick on a block and it will rotate";
+
 		
 		book.drawString(x + 22 + 45, y + 32, 55, 0.7F, text1);
 
-		String text2 = "block and it will rotate. The way it is rotated depends on the side you click on."
+		String text2 = "The way it is rotated depends on the side you clicked on."
 				+ " The Tool can also be used to rotate statues on the Y-Axis.";
 		
 		book.drawString(x + 22, y + 72, 100, 0.7F, text2);
 		
 		String text3 = "Pressing shift while using the Tool will invert the direction.";
 		
-		book.drawString(x + 22, y + 120, 100, 0.7F, text3);
+		book.drawString(x + 22, y + 110, 100, 0.7F, text3);
 		
 		// RIGHT SIDE
 		

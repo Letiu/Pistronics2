@@ -25,8 +25,11 @@ public class ItemReference {
 	public static final Block WOODEN_SLAB = Blocks.wooden_slab;
 	public static final Block TRAP_DOOR = Blocks.trapdoor;
 	public static final Block WOOL = Blocks.wool;
-	
+
+	public static final Block COBBLE = Blocks.cobblestone;
 	public static final Block STONE = Blocks.stone;
+
+	public static final Block OBSIDIAN = Blocks.obsidian;
 	
 	public static final Item STICK = Items.stick;
 	public static final Item IRON_INGOT = Items.iron_ingot;
@@ -136,6 +139,10 @@ public class ItemReference {
     }
 
     public static boolean isChest(Block block) {
-        return block instanceof BlockChest;
+        return block instanceof BlockChest || block instanceof BlockFurnace;
     }
+
+	public static boolean isPiston(Block block) {
+		return block instanceof BlockPistonBase || block instanceof BlockDropper || block instanceof BlockDispenser;
+	}
 }

@@ -30,6 +30,12 @@ public class Recipes {
 				"AAA", "AAA", "AAA", 
 				'A', ItemData.camoupaste.item);
 
+		RecipeUtil.addShapedRecipe(BlockItemUtil.getStack(BlockData.stopper, 4, 0),
+				"ABA", "BCB", "ABA",
+				'A', ItemReference.STICK,
+				'B', ItemReference.OBSIDIAN,
+				'C', ItemReference.COBBLE);
+
         if (!ConfigData.alternateSlimeblockRecipe) {
             RecipeUtil.addShapedRecipe(BlockItemUtil.getStack(ItemData.slimeblock, 1, 0),
                     "AA", "AA",

@@ -39,7 +39,8 @@ public class ItemGlue extends PItem {
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world,
 			int x, int y, int z, int side, float xHit, float yHit, float zHit) {
 
-        //System.out.println(WorldUtil.getBlockMeta(world, x, y, z));
+          System.out.println(WorldUtil.getBlockMeta(world, x, y, z));
+		  //RotateUtil.rotateVanillaBlocks(world, x, y, z, 1);
 
 //        ItemStack invStack = player.inventory.getStackInSlot(0);
 //        System.out.println(invStack);

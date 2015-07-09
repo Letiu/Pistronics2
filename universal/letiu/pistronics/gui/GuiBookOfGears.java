@@ -4,29 +4,7 @@ import java.util.List;
 
 import letiu.modbase.gui.GuiBase;
 import letiu.modbase.gui.GuiReference;
-import letiu.pistronics.gui.pages.Page;
-import letiu.pistronics.gui.pages.PageBlocks;
-import letiu.pistronics.gui.pages.PageBook;
-import letiu.pistronics.gui.pages.PageCamoupaste;
-import letiu.pistronics.gui.pages.PageCreativeMachine;
-import letiu.pistronics.gui.pages.PageExtUpgrades1;
-import letiu.pistronics.gui.pages.PageExtUpgrades2;
-import letiu.pistronics.gui.pages.PageExtension;
-import letiu.pistronics.gui.pages.PageGear;
-import letiu.pistronics.gui.pages.PageItems;
-import letiu.pistronics.gui.pages.PageMechPiston;
-import letiu.pistronics.gui.pages.PageMechRotator;
-import letiu.pistronics.gui.pages.PageParts;
-import letiu.pistronics.gui.pages.PagePetrifyArrow;
-import letiu.pistronics.gui.pages.PageRedstoneExtension;
-import letiu.pistronics.gui.pages.PageRedstoneRod;
-import letiu.pistronics.gui.pages.PageRod;
-import letiu.pistronics.gui.pages.PageRodFolder;
-import letiu.pistronics.gui.pages.PageSailPart;
-import letiu.pistronics.gui.pages.PageSlimeblock;
-import letiu.pistronics.gui.pages.PageSpade;
-import letiu.pistronics.gui.pages.PageStatue;
-import letiu.pistronics.gui.pages.PageTool;
+import letiu.pistronics.gui.pages.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -80,7 +58,7 @@ public class GuiBookOfGears extends GuiBase {
 		this.fontRenderer = Minecraft.getMinecraft().fontRenderer;
 		this.renderBlocks = new RenderBlocks();
 		
-		pages = new Page[22];
+		pages = new Page[23];
 		int i = 0;
 		pages[i++] = new PageBook();
 		// TODO: INDEX 
@@ -100,6 +78,7 @@ public class GuiBookOfGears extends GuiBase {
 		pages[i++] = new PageSailPart();
 		pages[i++] = new PageStatue();
 		pages[i++] = new PageSlimeblock();
+		pages[i++] = new PageStopper();
 		pages[i++] = new PageItems();
 		pages[i++] = new PageTool();
 		pages[i++] = new PageSpade();
