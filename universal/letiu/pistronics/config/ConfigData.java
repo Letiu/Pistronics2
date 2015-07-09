@@ -52,8 +52,8 @@ public class ConfigData {
 	public static boolean opaqueSlimeblocks = false;
 
     public static boolean showAllExtensions = true;
-    public static boolean showAllExtensionParts = true;
-    public static boolean showAllSails = true;
+    public static boolean showAllExtensionParts = false;
+    public static boolean showAllSails = false;
 
     public static boolean alternateSlimeblockRecipe = false;
 	
