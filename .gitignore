@@ -1,6 +1,8 @@
 
 /*
 
+.gitattributes
+
 !/Pistronics2-1.7.10
 /Pistronics2-1.7.10/*
 !/Pistronics2-1.7.10/src
