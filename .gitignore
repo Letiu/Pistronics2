@@ -1,3 +1,26 @@
+
+/*
+
+!/Pistronics2-1.7.10
+/Pistronics2-1.7.10/*
+!/Pistronics2-1.7.10/src
+/Pistronics2-1.7.10/src/main/resources
+
+!/Pistronics2-1.7.2
+/Pistronics2-1.7.2/*
+!/Pistronics2-1.7.2/src
+/Pistronics2-1.7.2/src/main/resources
+
+!/Pistronics2-1.6.4
+/Pistronics2-1.6.4/*
+!/Pistronics2-1.6.4/src
+/Pistronics2-1.6.4/src/main/resources
+
+!/universal
+!/resources
+
+!/LICENSE.txt
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

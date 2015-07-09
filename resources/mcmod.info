@@ -1,0 +1,20 @@
+[
+{
+  "modid": "Pistronics2",
+  "name": "Pistronics 2",
+  "description": "BETA-VERSION: Adds Pistons, Rotators and more.",
+  "version": "0.5.8",
+  "url": "TODO",
+  "updateUrl": "",
+  "authorList": [
+    "Letiu"
+  ],
+  "credits": "Written by Letiu, special thanks to VSWE, Pahimar and all other modders out there! =)",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
