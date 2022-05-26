@@ -63,6 +63,7 @@ public class PShapelessRecipe {
             for (int k = 0; k < ingredients.size(); k++) {
                 if (!foundIngredients[k] && CompareUtil.compare(ingredients.get(k), inv.getStackInSlot(i))) {
                     foundIngredients[k] = foundMatch = true;
+                    break;
                 }
             }
             if (!foundMatch && (inv.getStackInSlot(i) != null)) return false;
